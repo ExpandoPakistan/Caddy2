@@ -1,4 +1,13 @@
-www.example.com
+service1.example.com {
+    reverse_proxy 127.0.0.1:9009
+}
 
-reverse_proxy 127.0.0.1:3000
+reactapp.example.com {
+    root * /www
+    file_server
+    try_files {path} /index.html
+}
 
+service2.example.com {
+    reverse_proxy 127.0.0.1:3000
+}
