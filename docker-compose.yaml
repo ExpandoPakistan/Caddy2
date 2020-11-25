@@ -8,5 +8,6 @@ services:
       - ./data:/data
       - ./config:/config
       - ./Caddyfile:/etc/caddy/Caddyfile
+      - /home/user/path/to/react/app/build:/www
     network_mode: "host"
 
